@@ -1,0 +1,65 @@
+[project]
+name = "deep-search"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "aiofiles>=25.1.0",
+    "colorlog>=6.10.1",
+    "deepagents>=0.6.6",
+    "fastapi>=0.136.3",
+    "langchain-openai>=1.2.2",
+    "markdown>=3.10.2",
+    "mysql-connector-python>=9.7.0",
+    "openpyxl>=3.1.5",
+    "pandas>=3.0.3",
+    "pypdf>=6.12.2",
+    "python-docx>=1.2.0",
+    "python-dotenv>=1.2.2",
+    "python-multipart>=0.0.29",
+    "pywin32>=311",
+    "pyyaml>=6.0.3",
+    "ragflow-sdk==0.24.0",
+    "requests>=2.34.2",
+    "tavily-python>=0.7.24",
+    "uvicorn[standard]>=0.48.0",
+]
+
+
+## --- [核心依赖] Deep Agents 框架 ---
+#deepagents           # 多智能体库
+#
+## --- LangChain 生态 (基础支撑) ---
+#	langchain-core      # 基础组件
+#	langchain           # 初始化模型
+#	langgraph            # 智能体工作流编排
+#
+## --- 大模型服务 (LLM Services) ---
+#langchain-openai     # OpenAI 接口适配
+#
+## --- Web 服务 (API & WebSocket) ---
+#fastapi            # 异步 Web 框架
+#uvicorn[standard]   # 服务器引擎 (含 WebSocket)
+#python-multipart     # 文件上传支持
+#
+## --- 数据库与存储 (Database) ---
+#mysql-connector-python # MySQL 官方驱动
+## 注意：代码中使用的是 mysql.connector，对应这个包，而非 pymysql
+#
+## --- 文件处理
+#python-doc          # Word (.docx) 读取
+#pypdf                # PDF 读取
+#pandas              # Excel 数据处理
+#openpyxl            # Excel 读取引擎 (Pandas 依赖)
+#aiofiles           # 异步文件操作
+#
+## --- 外部工具集成 (Integrations) ---
+#tavily-python        # 联网搜索 API
+#ragflow-sdk          # 知识库 SDK
+#requests            # HTTP 请求库
+#
+## --- 基础工具 (Utilities) ---
+#python-dotenv        # 环境变量管理
+#pyyaml               # YAML 配置文件解析
+#pydantic             # 数据校验
